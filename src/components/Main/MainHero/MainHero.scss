@@ -1,0 +1,65 @@
+@import '../../../../styles/shared.scss';
+@import '../../../../styles/mixins.scss';
+
+
+
+.hero {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 0;
+
+    .hero-video {
+        min-height: 560px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+
+
+
+        .video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+        }
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+
+        .text-logo {
+            background-image: url($infoShareLogoWhite);
+        }
+
+        .text-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+
+            .info-btn-ticket {
+                @include primaryButton
+            }
+        }
+    }
+
+
+
+}

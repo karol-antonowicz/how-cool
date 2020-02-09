@@ -1,0 +1,99 @@
+@import '../../../styles/shared.scss';
+@import '../../../styles/mixins.scss';
+
+.header-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $primaryBackground;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    z-index: 3;
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+    .top-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        .infoshare-logo {
+            background-image: url($infoShareLogo);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: $infoShareLogoHeight;
+            width: $infoShareLogoWidth;
+            margin-right: 10px;
+            cursor: pointer;
+
+        }
+        .gdansk-logo {
+            background-image: url($gdanskLogo);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: $gdanskLogoHeight;
+            width: $gdanskLogoWidth;
+            box-sizing: border-box;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+    }
+    .menu {
+        
+        display: flex;
+        align-items: center;
+
+        .menu-btn-register {
+           @include primaryButton;
+           font-weight: bold;
+           margin-right: 6px;
+        }
+        .menu-btn-login {
+            @include primaryButton;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 7px;
+        }
+
+
+
+            .menu-hamburger-icon {
+                width: 40px;
+                height: 40px;
+                background-color: #081A39;
+                text-align: center;
+                z-index: 5;
+                position: relative;
+                cursor: pointer;
+                transition: 0.3s transform linear;
+                box-sizing: border-box;
+            }
+    }
+}
+
+.menu-dropdown{
+    z-index: 4;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color: #af4c4c67, $alpha: 0.6);
+    top:0;
+    position: absolute;
+
+}
+
+
+
+    .bottom-nav {
+        display: none;
+    }
+}
