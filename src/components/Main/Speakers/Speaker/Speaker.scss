@@ -1,0 +1,85 @@
+@import '../../../../../styles/shared.scss';
+/* filter: grayscale(0);*/
+
+.speaker-container  {
+    display: flex;
+    margin: 0 5px;
+    cursor: pointer;
+    width: 357px;
+    margin-bottom: 40px;
+
+    .speaker-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        
+        
+        .speaker-filter-primary {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: $primaryButtonColor;
+        }
+
+        .speaker-filter-secondary{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: $secondaryButtonColor;
+        }
+
+        .speaker-name {
+            font-size: 20px;
+            line-height: 18px;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            text-align: initial;
+
+        }
+
+        .speaker-company {
+            font-size: 18px;
+            line-height: 14px;
+            font-weight: normal;
+            margin: 0;
+            text-transform: uppercase;
+            text-align: initial;
+
+        }
+    }
+
+    .speaker-photo {
+        width: 107px;
+        height: 107px;
+        margin-right: 15px;
+        filter: grayscale(100%);
+
+
+        &:hover{
+            filter:grayscale(0%)
+        }
+
+
+    }
+
+
+
+
+}
+
+/* * * * * * BREAKPOINT 768 px * * * * * */
+
+@media only screen and (max-width: 400px) {
+
+    .speaker-container {
+        width: 290px;
+    }
+
+
+}

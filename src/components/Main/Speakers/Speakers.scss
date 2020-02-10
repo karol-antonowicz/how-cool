@@ -3,13 +3,14 @@
 
 .speakers-container {
     max-width: 1200px;
-text-align: center;
+    text-align: center;
     margin: 0 auto;
 
     .speakers-filter {
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
+        margin-bottom: 30px;
 
 
 
@@ -19,8 +20,9 @@ text-align: center;
             margin: 5px;
             margin-bottom: 0px;
             flex-wrap: wrap;
+
         }
-        
+
 
     }
 
@@ -33,6 +35,11 @@ text-align: center;
         .speakers-heading-span {
             font-weight: lighter;
         }
+    }
+
+    .speakers {
+        display: flex;
+        flex-wrap: wrap;
     }
 
 
