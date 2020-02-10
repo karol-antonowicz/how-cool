@@ -79,6 +79,10 @@
         }
     }
 
+    .menu-alt {
+        display: none;
+    }
+
     .menu-normal {
         position: fixed;
         top: 0;
@@ -233,12 +237,28 @@
 
     .header-nav {
         .wrapper {
+
+
             .menu-normal {
+                display: none;
+            }
+        
+            .menu-alt {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 list-style-type: none;
                 padding-bottom: 18px;
+
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+                list-style-type: none;
+                padding-bottom: 18px;
+
+                position: relative;
+                height: auto;
+                width: auto;
 
                 .dropdown {
                     position: relative;

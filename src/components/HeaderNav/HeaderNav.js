@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import './HeaderNav.scss';
 
 const infoShareWebSiteAdress = 'https://www.infoshare.pl';
@@ -7,30 +7,14 @@ const gdanskWebSiteAdress = 'https://www.gdansk.pl'
 export const HeaderNav = () => {
 
     const [menu, setMenu] = useState(false);
-    const [bigScreen, setBigScreen] = useState(false)
 
     const toggleMenu = () => {
-        console.log('dupa')
         setMenu(!menu)
     }
 
-    const toggleBigScreen = () => {
-        if (window.innerWidth > 1200) {
-            setBigScreen(true)
-            console.log('chuj')
-        }
-    }
-
-    useEffect(()=> {
-        setInterval(toggleBigScreen, 20);
-    })
-
     const infoShareArr = ['Stages', 'Side Events', 'Venue', 'Become a Volunteer', 'Media', 'Hotels', 'Discover Gdańsk', 'FAQ'];
     const whyAttendArr = ['Developer / IT Specialist', 'Marketer', 'Executive / CxO', 'Startup', 'Investor / Business Angel', 'Tech Fan'];
-    const speakersArr = ['Infoshare 2020 Speakers', 'Call for Speakers'];
-    const startUpsArr = ['Startup Contest', 'Speed Dating', 'Why attend - Startup', 'Webinar'];
-    const ourProjectsArr = ['AI & Data Science Conference / Warsaw', 'Pipeline Summit', 'Future3', 'GrowTech Magazine', 'Poland Prize', 'Global CEO Research', 'AI Developers raport', 'Cybersec Guide'];
-    const aboutArr = ['Job', 'Blog', 'IS Team', 'Contact', 'RE:infoShare']
+
 
     const infoShareLinks = infoShareArr.map(el => (
         <li>
@@ -61,7 +45,7 @@ export const HeaderNav = () => {
                         </a>
                     </div>
                 </div>
-                <div className='menu-normal' style={menu?{display:'flex'}:{display:'none'}} >
+                <div className={menu?'menu-normal':'menu-alt'}>
 
                     <li className='dropdown'>
                         <a className='dropbtn' alt='dupa' href='https://dupa.pl' class='click-effect'>Infoshare 2020</a>
