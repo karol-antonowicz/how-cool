@@ -1,0 +1,94 @@
+@import '../../../../styles/shared.scss';
+
+@import '../../../../styles/mixins.scss';
+
+.aftermovie-flex-container {
+    display: flex;
+    flex-direction: column;
+
+    .aftermovie-video {
+        min-height: 450px;
+        width: 100%;
+        background-color: rgb(70, 70, 230);
+        position: relative;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .aftermovie-video-icon {
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+
+        }
+
+        .aftermovie-video-title {
+            color: white;
+            text-transform: uppercase;
+            font-size: 22px;
+
+            .aftermovie-video-title-bold {
+                font-weight: bold;
+            }
+
+
+        }
+    }
+
+    .aftermovie-text {
+        padding: 0px 30px 30px 30px;
+        color: white;
+        background-color: $afterMovieBackground;
+
+        .aftermovie-text-heading {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+
+        .aftermovie-text-paragraph {
+            line-height: 20px;
+            font-size: 18px;
+        }
+
+        .aftermovie-btn-secondary {
+            @include secondaryButton;
+            font-weight: bold;
+        }
+    }
+}
+
+/* * * * * * BREAKPOINT 768 px * * * * * */
+
+@media only screen and (min-width: 768px) {
+
+    .aftermovie-flex-container {
+        .aftermovie-video {
+            display: flex;
+        }
+        .aftermovie-text {
+        }
+    }
+
+}
+
+/* * * * * * BREAKPOINT 990 px * * * * * */
+
+@media only screen and (min-width: 990px) {
+    .aftermovie-flex-container {
+        flex-direction: row;
+
+        .aftermovie-video {
+            width: 50%;
+        }
+        .aftermovie-text {
+            width: 50%;
+        }
+    }
+
+}
+
+/* * * * * * BREAKPOINT 1200 px * * * * * */
+
+@media only screen and (min-width: 1200px) {}

@@ -3,6 +3,7 @@ import './Main.scss';
 import { MainHero } from './MainHero/MainHero';
 import { MainNumbers } from './MainNumbers/MainNumbers';
 import {MainWhoAreYou} from './MainWhoAreYou/MainWhoAreYou';
+import {AfterMovie} from './AfterMovie/AfterMovie';
 
 const arr1 = {
     name: 'a developer',
@@ -58,6 +59,7 @@ export const Main = () => {
             <MainWhoAreYou who={arr6.name}
                 firstParagraph={arr6.firstParagraph}
                 secondParagraph={arr6.secondParagraph} />
+                <AfterMovie/>
         </div>
     )
 }
