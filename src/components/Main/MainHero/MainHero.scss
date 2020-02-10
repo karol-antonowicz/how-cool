@@ -45,6 +45,7 @@
 
         .text-logo {
             background-image: url($infoShareLogoWhite);
+            margin-bottom: 30px;
         }
 
         .text-info {
@@ -54,12 +55,65 @@
             align-items: center;
             color: #fff;
 
-            .info-btn-ticket {
-                @include primaryButton
+            .text-info-heading {
+                font-size: 18px;
+                font-weight: lighter;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .bold {
+                font-weight: bold;
+
+            }
+
+            .secondary {
+                font-weight: 100;
+                text-transform: initial;
+                margin-bottom: 15px;
+            }
+
+            .text-btn-ticket {
+                @include primaryButtonBig;
             }
         }
     }
+}
+
+/* * * * * * BREAKPOINT 768 px * * * * * */
+
+@media only screen and (min-width: 768px) {
 
 
+}
+
+/* * * * * * BREAKPOINT 990 px * * * * * */
+
+@media only screen and (min-width: 990px) {
+
+
+
+
+}
+
+
+/* * * * * * BREAKPOINT 1200 px * * * * * */
+
+@media only screen and (min-width: 1200px) {
+
+
+    .hero {
+        .hero-text {
+            .text-info{
+                .text-info-heading {
+                    font-size: 30px;
+                }
+                .secondary {
+                    font-size: 48px;
+                }
+            }
+        }
+    }
 
 }

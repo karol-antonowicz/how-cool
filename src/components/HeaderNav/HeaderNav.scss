@@ -6,14 +6,17 @@
     top: 0;
     width: 100%;
     background-color: $primaryBackground;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     z-index: 3;
 
     .wrapper {
         max-width: 1200px;
         margin: 0 auto;
+        position: relative;
     }
+
+
 
 
     .top-header {
@@ -21,49 +24,44 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px;
+        padding-bottom: 18px;
 
 
-    .logo {
-        display: flex;
-        align-items: center;
+        .logo {
+            display: flex;
+            align-items: center;
 
-        .infoshare-logo {
-            background-image: url($infoShareLogo);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: $infoShareLogoHeight;
-            width: $infoShareLogoWidth;
-            margin-right: 10px;
-            cursor: pointer;
+            .infoshare-logo {
+                /*background-image: url($infoShareLogo);*/
+                background-color: saddlebrown;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: $infoShareLogoHeight;
+                width: $infoShareLogoWidth;
+                margin-right: 10px;
+                cursor: pointer;
 
+            }
+
+            .gdansk-logo {
+                display: none;
+                background-color: red;
+            }
         }
-        .gdansk-logo {
-            background-image: url($gdanskLogo);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: $gdanskLogoHeight;
-            width: $gdanskLogoWidth;
-            box-sizing: border-box;
-            margin-left: 15px;
-            cursor: pointer;
-        }
-    }
-    .menu {
-        
-        display: flex;
-        align-items: center;
 
-        .menu-btn-register {
-           @include primaryButton;
-           font-weight: bold;
-           margin-right: 6px;
-        }
-        .menu-btn-login {
-            @include primaryButton;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-right: 7px;
-        }
+        .menu {
+
+            display: flex;
+            align-items: center;
+
+            .menu-btn-register {
+                display: none;
+
+            }
+
+            .menu-btn-login {
+                display: none;
+            }
 
 
 
@@ -78,22 +76,241 @@
                 transition: 0.3s transform linear;
                 box-sizing: border-box;
             }
+        }
+    }
+
+    .menu-normal {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+        background-color: $primaryBackground;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        list-style-type: none;
+        padding-bottom: 18px;
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown:hover .dropbtn-content {
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #000;
+
+            position: relative;
+            display: inline-block;
+
+            &:hover {
+                color: $primaryButtonColor;
+            }
+        }
+
+        .dropbtn-content {
+            display: none;
+            position: absolute;
+            top: 15px;
+            left: -15px;
+            background-color: $primaryBackground;
+            min-width: 50px;
+            margin-top: 4px;
+            padding-left: 0;
+            padding-right: 0;
+            box-shadow: 0 21px 15px rgba(0, 0, 0, 0.082);
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            min-width: 200px;
+
+            li {
+
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                padding-bottom: 0px;
+                padding-top: 0px;
+
+                &:nth-of-type(1) {
+                    padding-top: 15px;
+                }
+
+                &:last-of-type {
+                    padding-bottom: 8px;
+                }
+
+            }
+
+            .drop-text {
+                font-size: 16px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+
+
+
+}
+
+/* * * * * * BREAKPOINT 768 px * * * * * */
+
+@media only screen and (min-width: 768px) {
+
+
+    .header-nav {
+        .wrapper {
+
+            .top-header {
+                .logo {
+                    .gdansk-logo {
+                        display: initial;
+                        /*background-image: url($gdanskLogo);*/
+                        background-color: red;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: $gdanskLogoHeight;
+                        width: $gdanskLogoWidth;
+                        box-sizing: border-box;
+                        margin-left: 15px;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+
+
+
+
+        }
     }
 }
 
-.menu-dropdown{
-    z-index: 4;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba($color: #af4c4c67, $alpha: 0.6);
-    top:0;
-    position: absolute;
+/* * * * * * BREAKPOINT 990 px * * * * * */
+
+@media only screen and (min-width: 990px) {
+
+
+    .header-nav {
+        .wrapper {
+            
+            .menu {
+                .menu-btn-register {
+                    @include primaryButton;
+                    padding: 0 15px;
+                    font-weight: bold;
+                    margin-right: 6px;
+                }
+
+                .menu-btn-login {
+                    @include primaryButton;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-right: 7px;
+                }
+
+            }
+        }
+    }
+
 
 }
 
 
+/* * * * * * BREAKPOINT 1200 px * * * * * */
 
-    .bottom-nav {
-        display: none;
+@media only screen and (min-width: 1200px) {
+
+    .header-nav {
+        .wrapper {
+            .menu-normal {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                list-style-type: none;
+                padding-bottom: 18px;
+
+                .dropdown {
+                    position: relative;
+                }
+
+                .dropdown:hover .dropbtn-content {
+                    display: block;
+                }
+
+                a {
+                    text-decoration: none;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: #000;
+
+                    position: relative;
+                    display: inline-block;
+
+                    &:hover {
+                        color: $primaryButtonColor;
+                    }
+                }
+
+                .dropbtn-content {
+                    display: none;
+                    position: absolute;
+                    top: 15px;
+                    left: -15px;
+                    background-color: $primaryBackground;
+                    min-width: 50px;
+                    margin-top: 4px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    box-shadow: 0 21px 15px rgba(0, 0, 0, 0.082);
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    min-width: 200px;
+
+                    li {
+
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                        padding-bottom: 0px;
+                        padding-top: 0px;
+
+                        &:nth-of-type(1) {
+                            padding-top: 15px;
+                        }
+
+                        &:last-of-type {
+                            padding-bottom: 8px;
+                        }
+
+                    }
+
+                    .drop-text {
+                        font-size: 16px;
+                        margin-top: 2px;
+                        margin-bottom: 2px;
+                    }
+                }
+
+
+            }
+            .menu {
+                .menu-hamburger-icon {
+                    display: none;
+                }
+            }
+        }
     }
+
 }
