@@ -1,0 +1,30 @@
+@import '../../../../styles/shared.scss';
+.who-container {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+
+    .who-heading {
+        font-size: 42px;
+        color: $primaryButtonColor;
+        font-weight: 600;
+
+    }
+
+    .who-list {
+
+        .who-list-paragraph{
+            font-size: 30px;
+            font-weight: 500;
+            
+            &::marker {
+                color: blue;
+            }
+        }
+    }
+
+    .who-read{
+
+    }
+}
