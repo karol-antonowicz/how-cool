@@ -1,0 +1,39 @@
+@import '../../../../styles//shared.scss';
+@import '../../../../styles//mixins.scss';
+
+.speakers-container {
+    max-width: 1200px;
+text-align: center;
+    margin: 0 auto;
+
+    .speakers-filter {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+
+
+        .btn-container {
+            height: 50px;
+            display: inline-block;
+            margin: 5px;
+            margin-bottom: 0px;
+            flex-wrap: wrap;
+        }
+        
+
+    }
+
+    .speakers-heading {
+        font-size: 28px;
+        text-transform: uppercase;
+        margin-top: 60px;
+        margin-bottom: 20px;
+
+        .speakers-heading-span {
+            font-weight: lighter;
+        }
+    }
+
+
+}

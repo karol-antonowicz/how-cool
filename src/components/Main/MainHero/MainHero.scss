@@ -48,8 +48,8 @@
         z-index: 2;
 
         .text-logo {
-            background-image: url($infoShareLogoWhite);
             margin-bottom: 30px;
+            max-width: 100%;
         }
 
         .text-info {

@@ -1,0 +1,24 @@
+@import '../../../styles/shared.scss';
+@import '../../../styles/mixins.scss';
+
+.btn-primary {
+    @include primaryButton;
+    width: max-content;
+    padding: 0 5px 0 5px;
+    img{
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+       
+    }
+}
+
+.btn-secondary {
+    @include secondaryButton;
+    width: max-content;
+    padding: 0 5px 0 5px;
+    img{
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        
+    }
+}
