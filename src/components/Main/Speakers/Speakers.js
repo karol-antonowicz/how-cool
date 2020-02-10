@@ -33,7 +33,7 @@ export const Speakers = () => {
         { name: 'alan cross', company: 'brain dead dog productions', icon:growthIcon, technology: 'growth', photoUrl: 'https://infoshare.pl/system/cache/img/paris-buttfield-addison-20-74dntvlmmoj0.jpg' },
         { name: 'james rodgers', company: 'sdu / lse', icon:inspireIcon, technology: 'inspire', photoUrl: 'https://infoshare.pl/system/cache/img/paris-buttfield-addison-20-74dntvlmmoj0.jpg' }
     ];
-    
+
     const [filter, setFilter] = useState(filters);
 
     const toggleFilter = filterName => filter !== filterName ? setFilter(filterName) : setFilter(filters);
