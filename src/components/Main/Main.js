@@ -5,6 +5,7 @@ import { MainNumbers } from './MainNumbers/MainNumbers';
 import { AfterMovie } from './AfterMovie/AfterMovie';
 import { Speakers } from './Speakers/Speakers';
 import { MainWho } from './MainWho/MainWho';
+import { Videos2019 } from './Videos2019/Videos2019';
 
 
 
@@ -16,6 +17,7 @@ export const Main = () => {
             <MainWho />
             <AfterMovie />
             <Speakers />
+            <Videos2019/>
         </div>
     )
 }

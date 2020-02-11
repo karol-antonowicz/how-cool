@@ -42,5 +42,14 @@
         flex-wrap: wrap;
     }
 
+    .btn-more-speakers {
+        @include secondaryButton;
+        font-weight:bold;
+        margin-top: 20px;
+        margin-bottom:60px;
+        height: 50px;
+        font-size: 20px;
+    }
+
 
 }

@@ -91,33 +91,35 @@
 
 }
 
-@mixin primaryButtonBig {
-    background-color: yellow;
-    display: inline-block;
-    height: 50px;
-    max-width: 100%;
-    line-height: 38px;
-    padding: 0 40px;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    vertical-align: middle;
-    text-align: center;
-    background-color: $primaryButtonColor;
-    border: 1px solid  $primaryButtonColor;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: normal;
-    outline: none;
-    text-decoration: none;
-    transition: .6s;
+@mixin videoSpeaker {
+    height: 400px;
+    width: 400px;
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-&:hover {
-    background-color: #fff;
-    border: 1px solid $primaryButtonColor;
-    color: $primaryButtonColor;
+
+    .videoSpeaker-text-infoshare {
+        text-align: right;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .videoSpeaker-text-container {
+
+        .videoSpeaker-text-name {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .videoSpeaker-text-title {
+            font-weight: lighter;
+            font-size: 18px;
+        }
+
+    }
 }
 
-}

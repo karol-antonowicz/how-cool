@@ -12,7 +12,16 @@ export const deeptechIcon = 'https://infoshare.pl/system/cache/img/deep-tech-w-5
 export const backEndIcon = 'https://infoshare.pl/system/cache/img/back-end-w-3449a56nk9hg.png'
 
 export const Speakers = () => {
-    const filters = ['inspire', 'growth', 'marketing', 'devtrends', 'front-end', 'deeptech', 'backend'];
+    const filters = ['inspire', 'growth', 'marketing', 'devtrends', 'front-end', 'deeptech', 'backend']
+    const filtersArray = [
+        {technology: 'inspire', icon: inspireIcon},
+        {technology: 'growth', icon: growthIcon},
+        {technology: 'marketing', icon: marketingIcon},
+        {technology: 'devtrends', icon: devtrendsIcon},
+        {technology: 'front-end', icon: frontEndIcon},
+        {technology: 'deeptech', icon: deeptechIcon},
+        {technology: 'backend', icon: backEndIcon},
+];
     const speakersArray = [
         { name: 'nicci stewart', company: 'the why effect', icon:inspireIcon, technology: 'inspire', photoUrl: 'https://infoshare.pl/system/cache/img/paris-buttfield-addison-20-74dntvlmmoj0.jpg', },
         { name: 'brian spears', company: 'new age meats',icon:growthIcon, technology: 'growth', photoUrl: 'https://infoshare.pl/system/cache/img/paris-buttfield-addison-20-74dntvlmmoj0.jpg' },
@@ -40,29 +49,16 @@ export const Speakers = () => {
 
     return (
         <div className='speakers-container'>
-            <h5 className='speakers-heading'>first Spekaers <span className='speakers-heading-span'>2020</span></h5>
+            <h5 className='speakers-heading'>first Speakers <span className='speakers-heading-span'>2020</span></h5>
             <section className='speakers-filter'>
-                <div className='btn-container' onClick={() => { toggleFilter(filters[0]) }} >
-                    <Filter className='btn-filter' icon={inspireIcon} title={filters[0]} uppercase />
-                </div>
-                <div className='btn-container' onClick={() => { toggleFilter(filters[1]) }}>
-                    <Filter className='btn-filter' icon={growthIcon} title={filters[1]} uppercase />
-                </div>
-                <div className='btn-container' onClick={() => { toggleFilter(filters[2]) }}>
-                    <Filter className='btn-filter' icon={marketingIcon} title={filters[2]} uppercase />
-                </div>
-                <div className='btn-container' onClick={() => { toggleFilter(filters[3]) }}>
-                    <Filter className='btn-filter' icon={devtrendsIcon} title={filters[3]} secondary uppercase />
-                </div>
-                <div className='btn-container' onClick={() => { toggleFilter(filters[4]) }}>
-                    <Filter className='btn-filter' icon={frontEndIcon} title={filters[4]} secondary uppercase />
-                </div>
-                <div className='btn-container' onClick={() => { toggleFilter(filters[5]) }}>
-                    <Filter className='btn-filter' icon={deeptechIcon} title={filters[5]} secondary uppercase />
-                </div>
-                <div className='btn-container' onClick={() => { toggleFilter(filters[6]) }}>
-                    <Filter className='btn-filter' icon={backEndIcon} title={filters[6]} secondary uppercase />
-                </div>
+
+                    {filtersArray.map(el=>{
+                        return (
+                            <div className='btn-container' onClick={() => { toggleFilter(el.technology) }} >
+                            <Filter active={filter} icon={el.icon} title={el.technology} uppercase />
+                        </div>
+                        )
+                    })}
             </section>
             <secton className='speakers'>
 
@@ -74,6 +70,7 @@ export const Speakers = () => {
 
 
             </secton>
+            <button className='btn-more-speakers'>More infoShare 2020 Speakers</button>
         </div>
     )
 }

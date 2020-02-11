@@ -7,7 +7,7 @@ export const AfterMovie = () => {
         <div className='aftermovie-flex-container'>
             <div className='aftermovie-video'>
                 <p className='aftermovie-video-title'>2019 <span className='aftermovie-video-title-bold'>Aftermovie</span></p>
-                <img src={playIcon} className='aftermovie-video-icon'></img>
+                <img src={playIcon} className='aftermovie-video-icon' alt='aftermovie'></img>
             </div>
             <div className='aftermovie-text'>
                 <h5 className='aftermovie-text-heading'>Infoshare - a place to be</h5>

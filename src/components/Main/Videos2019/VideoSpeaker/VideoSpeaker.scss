@@ -1,0 +1,51 @@
+@import '../../../../../styles//shared.scss';
+@import '../../../../../styles//mixins.scss';
+
+.videoSpeaker-container {
+
+    display: flex;
+    width: 100%;
+
+    .videoSpeaker-video {
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+
+        .videoSpeaker-video-icon {
+
+            height: 100px;
+            width: 100px;
+        }
+    }
+
+    .videoSpeaker-text-primary {
+        @include videoSpeaker;
+        background-color: $primaryVideoSpeakerColor;    /* extra*/
+        color: white; /* extra */
+
+    }
+
+    .videoSpeaker-text-secondary {
+        @include videoSpeaker;
+        background-color: $secondaryVideoSpeakerColor;
+        color: black;
+    }
+
+
+
+}
+
+
+/* * * * * * BREAKPOINT 1200 px * * * * * */
+
+@media only screen and (min-width: 1200px) {
+
+    .videoSpeaker-container {
+        
+    }
+
+
+}

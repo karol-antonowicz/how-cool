@@ -12,6 +12,20 @@
     }
 }
 
+.btn-primary-active {
+    @include primaryButton;
+    background-color: #fff;
+    border: 1px solid $primaryButtonColor;
+    color: $primaryButtonColor;
+    width: max-content;
+    padding: 0 5px 0 5px;
+    img{
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+       
+    }
+}
+
 .btn-secondary {
     @include secondaryButton;
     width: max-content;
@@ -21,4 +35,18 @@
         vertical-align: middle;
         
     }
+}
+
+    .btn-secondary-active {
+        @include secondaryButton;
+        width: max-content;
+        padding: 0 5px 0 5px;
+        background-color: #fff;
+        border: 1px solid $secondaryButtonColor;
+        color: $secondaryButtonColor;
+        img{
+            margin: 0 10px 0 0;
+            vertical-align: middle;
+            
+        }
 }
