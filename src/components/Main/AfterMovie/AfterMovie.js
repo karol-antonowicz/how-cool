@@ -10,7 +10,7 @@ export const AfterMovie = () => {
                 <img src={playIcon} className='aftermovie-video-icon' alt='aftermovie'></img>
             </div>
             <div className='aftermovie-text'>
-                <h5 className='aftermovie-text-heading'>Infoshare - a place to be</h5>
+                <h5 className='aftermovie-text-heading'>Infoshare - a place where You can share</h5>
                 <p className='aftermovie-text-paragraph'>We have always wanted to create a space where we can share our ideas and passions. That is why and how we created Infoshare. A place with an access to worthy know-how. A place where everyone can simply share.</p>
                 <p className='aftermovie-text-paragraph'>Share knowledge, ideas, passion, experience, know-how, tech-news, share emotions.</p>
                 <p className='aftermovie-text-paragraph'>Make sure you'll be there next year!</p>

@@ -9,7 +9,7 @@ export const MainHero = () => {
         <div className='hero'>
             <div className='hero-video'>
                 <video autoPlay className='video' loop='loop' muted preload='auto'>
-                    <source src='https://ok.pl' type='video/mp4' />
+                    <source src={infoShareMovie} type='video/mp4' />
                 </video>
             </div>
             <div className='hero-text'>

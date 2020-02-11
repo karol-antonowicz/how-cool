@@ -39,13 +39,115 @@
 }
 
 
+
+
+/* * * * * * BREAKPOINT 768 px * * * * * */
+
+@media only screen and (min-width: 768px) {
+
+    .videoSpeaker-container {
+
+        .videoSpeaker-text-primary {
+
+            padding: 30px; 
+
+            .videoSpeaker-text-infoshare {
+                font-size: 20px; 
+            }
+        
+            .videoSpeaker-text-container {
+        
+                .videoSpeaker-text-name {
+                    font-size: 28px; 
+                }
+        
+                .videoSpeaker-text-title {
+                    font-size: 18px; 
+                }
+        
+            }
+
+        }
+
+
+        .videoSpeaker-text-secondary {
+
+            padding: 30px; 
+
+            .videoSpeaker-text-infoshare {
+                font-size: 20px; 
+            }
+        
+            .videoSpeaker-text-container {
+        
+                .videoSpeaker-text-name {
+                    font-size: 28px; 
+                }
+        
+                .videoSpeaker-text-title {
+                    font-size: 18px; 
+                }
+        
+            }
+
+        }
+        
+    }
+
+
+}
+
+
 /* * * * * * BREAKPOINT 1200 px * * * * * */
 
 @media only screen and (min-width: 1200px) {
 
     .videoSpeaker-container {
+
+        .videoSpeaker-text-primary {
+
+
+            .videoSpeaker-text-infoshare {
+                font-size: 24px; 
+            }
+        
+            .videoSpeaker-text-container {
+        
+                .videoSpeaker-text-name {
+                    font-size: 32px; 
+                }
+        
+                .videoSpeaker-text-title {
+                    font-size: 22px; 
+                }
+        
+            }
+
+        }
+
+
+        .videoSpeaker-text-secondary {
+
+            .videoSpeaker-text-infoshare {
+                font-size: 24px; 
+            }
+        
+            .videoSpeaker-text-container {
+        
+                .videoSpeaker-text-name {
+                    font-size: 32px; 
+                }
+        
+                .videoSpeaker-text-title {
+                    font-size: 22px; 
+                }
+        
+            }
+
+        }
         
     }
+
 
 
 }

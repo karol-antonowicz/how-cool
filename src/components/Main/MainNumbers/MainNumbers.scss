@@ -5,19 +5,21 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-flow: wrap;
-    margin-top: 40px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .main-number-text-container {
     display: flex;
     justify-content: center;
-    
+    max-width: 1200px;
+    margin: 0 auto;
+
     .main-number-text {
         display: block;
-        font-size: 48px;
+        font-size: 40px;
         color: $primaryButtonColor;
         font-weight: 600;
         text-transform: uppercase;
@@ -25,5 +27,5 @@
         margin-top: 15px;
         margin-bottom: 40px;
     }
-    
-    }
+
+}
