@@ -51,6 +51,7 @@
         .text-logo {
             margin-bottom: 30px;
             max-width: 100%;
+
         }
 
         .text-info {
@@ -75,6 +76,7 @@
 
             .secondary {
                 font-weight: 100;
+                font-size: 20px;
                 text-transform: initial;
                 margin-bottom: 15px;
             }
@@ -84,6 +86,13 @@
             }
         }
     }
+}
+
+
+
+@media only screen and (min-width: 480px) {
+
+
 }
 
 /* * * * * * BREAKPOINT 768 px * * * * * */
