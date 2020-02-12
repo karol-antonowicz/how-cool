@@ -16,9 +16,6 @@
         position: relative;
     }
 
-
-
-
     .top-header {
         display: flex;
         align-items: center;
@@ -32,8 +29,7 @@
             align-items: center;
 
             .infoshare-logo {
-                /*background-image: url($infoShareLogo);*/
-                background-color: saddlebrown;
+                background-image: url($infoShareLogo);
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: $infoShareLogoHeight;
@@ -45,7 +41,6 @@
 
             .gdansk-logo {
                 display: none;
-                background-color: red;
             }
         }
 
@@ -68,7 +63,7 @@
             .menu-hamburger-icon {
                 width: 40px;
                 height: 40px;
-                background-color: #081A39;
+                background-image: url(../../assets/img/hamburger.png);
                 text-align: center;
                 z-index: 5;
                 position: relative;
@@ -84,13 +79,15 @@
     }
 
     .menu-normal {
+        overflow-y: auto;
         position: fixed;
         top: 0;
         left: 0px;
         height: 100vh;
         width: 100vw;
         z-index: 1;
-        background-color: $primaryBackground;
+        background-color: $mobileMenuColor;
+
 
         display: flex;
         flex-direction: column;
@@ -101,10 +98,47 @@
 
         .dropdown {
             position: relative;
+            width: 100vw;
+            background-color: $mobileMenuColor;
+            
+        }
+
+        .click-effect {
+            color: white;
+        }
+
+        .clickme {
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            background-image: url(../../assets/img/plus.png);
+            margin-right: 80px;
+        }
+
+        .clickme-close {
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            background-image: url(../../assets/img/minus.png);
+            margin-right: 80px;
+        }
+
+        .drop-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            .dropbtn {
+                color:white;
+
+                &:hover {
+                    color: $primaryButtonColor;
+                }
+            }
+
         }
 
         .dropdown:hover .dropbtn-content {
-            display: block;
+           /* display: block; */
         }
 
         a {
@@ -122,11 +156,8 @@
         }
 
         .dropbtn-content {
-            display: none;
-            position: absolute;
-            top: 15px;
-            left: -15px;
-            background-color: $primaryBackground;
+            display: block;
+            background-color: $mobileMenuColor;
             min-width: 50px;
             margin-top: 4px;
             padding-left: 0;
@@ -135,6 +166,9 @@
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
             min-width: 200px;
+            margin-bottom: 0;
+
+
 
             li {
 
@@ -146,7 +180,7 @@
                 padding-top: 0px;
 
                 &:nth-of-type(1) {
-                    padding-top: 15px;
+                    padding-top: 0px;
                 }
 
                 &:last-of-type {
@@ -159,7 +193,15 @@
                 font-size: 16px;
                 margin-top: 2px;
                 margin-bottom: 2px;
+                color: white;
+
+                &:hover {
+                    color: $primaryButtonColor;
+                }
             }
+        }
+        .dropik {
+            display: none;
         }
     }
 
@@ -179,8 +221,7 @@
                 .logo {
                     .gdansk-logo {
                         display: initial;
-                        /*background-image: url($gdanskLogo);*/
-                        background-color: red;
+                        background-image: url($gdanskLogo);
                         background-repeat: no-repeat;
                         background-size: cover;
                         height: $gdanskLogoHeight;
@@ -260,8 +301,15 @@
                 height: auto;
                 width: auto;
 
+                .drop-text {
+                    &:hover {
+                        color:$primaryButtonColor;
+                    }
+                }
+
                 .dropdown {
                     position: relative;
+                    width: auto;
                 }
 
                 .dropdown:hover .dropbtn-content {
@@ -281,6 +329,17 @@
                         color: $primaryButtonColor;
                     }
                 }
+
+                .dropik {
+                    display: none;
+                }
+
+                .clickme {
+                    display: none;
+                    
+                }
+
+
 
                 .dropbtn-content {
                     display: none;
@@ -320,6 +379,10 @@
                         font-size: 16px;
                         margin-top: 2px;
                         margin-bottom: 2px;
+                        color:black;
+                        &:hover {
+                            color: $primaryButtonColor;
+                        }
                     }
                 }
 

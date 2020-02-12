@@ -1,20 +1,28 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
+import plus from '../../assets/img/plus.png';
+import minus from '../../assets/img/minus.png';
 import './HeaderNav.scss';
 
-const infoShareWebSiteAdress = 'https://www.infoshare.pl';
-const gdanskWebSiteAdress = 'https://www.gdansk.pl'
+
 
 export const HeaderNav = () => {
 
     const [menu, setMenu] = useState(false);
+    const [visible, setVisible] = useState("")
 
     const toggleMenu = () => {
         setMenu(!menu)
     }
 
-    const infoShareArr = ['Stages', 'Side Events', 'Venue', 'Become a Volunteer', 'Media', 'Hotels', 'Discover Gdańsk', 'FAQ'];
-    const whyAttendArr = ['Developer / IT Specialist', 'Marketer', 'Executive / CxO', 'Startup', 'Investor / Business Angel', 'Tech Fan'];
+    const isVisible = id => {
+        setVisible(id)
+    }
 
+    const menuOptions = ['InfoShare 2020', 'Why Attend', 'Outline Agenda', 'Speakers', 'Become a Partner', 'Startups', 'Our Projects']
+    const infoShareArr = ['Stages', 'Side Events', 'Venue', 'Discover Gdańsk', 'FAQ'];
+
+    const infoShareWebSiteAdress = 'https://www.infoshare.pl';
+    const gdanskWebSiteAdress = 'https://www.gdansk.pl'
 
     const infoShareLinks = infoShareArr.map(el => (
         <li>
@@ -22,11 +30,6 @@ export const HeaderNav = () => {
         </li>
     ))
 
-    const whyAttendLinks = whyAttendArr.map(el => (
-        <li>
-            <a className='drop-text' alt={el} href={`https://infoshare.pl/${el.split(" ").join("-").toLowerCase()}`}>{el}</a>
-        </li>
-    ))
 
     return (
         <div className='header-nav'>
@@ -45,61 +48,30 @@ export const HeaderNav = () => {
                         </a>
                     </div>
                 </div>
-                <div className={menu?'menu-normal':'menu-alt'}>
+                <div className={menu ? 'menu-normal' : 'menu-alt'}>
 
-                    <li className='dropdown'>
-                        <a className='dropbtn' alt='dupa' href='https://dupa.pl' class='click-effect'>Infoshare 2020</a>
-                        <ul className='dropbtn-content'>
-                            {infoShareLinks}
-                        </ul>
-                    </li>
-
-                    <li className='dropdown'>
-                        <a className='dropbtn' alt='dupa' href='https://dupa.pl' class='click-effect'>Poeple</a>
-                        <ul className='dropbtn-content'>
-                            {whyAttendLinks}
-                        </ul>
-                    </li>
-                    <li className='dropdown'>
-                        <a className='dropbtn' alt='dupa' href='https://dupa.pl' class='click-effect'>About</a>
-                        <ul className='dropbtn-content'>
-                            {infoShareLinks}
-                        </ul>
-                    </li>
-
-                    <li className='dropdown'>
-                        <a className='dropbtn' alt='dupa' href='https://dupa.pl' class='click-effect'>Our Future</a>
-                        <ul className='dropbtn-content'>
-                            {whyAttendLinks}
-                        </ul>
-                    </li>
-                    <li className='dropdown'>
-                        <a className='dropbtn' alt='dupa' href='https://dupa.pl' class='click-effect'>Discor FAQ</a>
-                        <ul className='dropbtn-content'>
-                            {infoShareLinks}
-                        </ul>
-                    </li>
-
-                    <li className='dropdown'>
-                        <a className='dropbtn' alt='dupa' href='https://dupa.pl' class='click-effect'>66666</a>
-                        <ul className='dropbtn-content'>
-                            {whyAttendLinks}
-                        </ul>
-                    </li>
-                    <li className='dropdown'>
-                        <a className='dropbtn' alt='dupa' href='https://dupa.pl' class='click-effect'>Logi Baby</a>
-                        <ul className='dropbtn-content'>
-                            {infoShareLinks}
-                        </ul>
-                    </li>
-
-                    <li className='dropdown'>
-                        <a className='dropbtn' alt='dupa' href='https://dupa.pl' class='click-effect'>OK DUDE</a>
-                        <ul className='dropbtn-content'>
-                            {whyAttendLinks}
-                        </ul>
-                    </li>
-
+                    {menuOptions.map((el, index) => {
+                        return (
+                            <div key={index}>
+                                <li className='dropdown'>
+                                    <div className='drop-wrapper'>
+                                        <a className='dropbtn' alt='dupa' href='https://infoshare.pl'>{el}</a>
+                                        <div className={(visible===index)?'clickme-close':'clickme'} onClick={() => {
+                                            if (index === visible) {
+                                                isVisible("")
+                                            } else {
+                                                isVisible(index)
+                                            }
+                                        }
+                                        } />
+                                    </div>
+                                    <ul className={(visible === index) ? 'dropbtn-content' : 'dropbtn-content dropik'}>
+                                        {infoShareLinks}
+                                    </ul>
+                                </li>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </div>
