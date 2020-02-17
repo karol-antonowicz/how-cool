@@ -20,7 +20,7 @@ const whatClass = () => {
         className={whatClass()}
         style={props.uppercase?{textTransform: 'uppercase'}:{textTransform:'none'}}
         >
-            {props.icon?(<img src={props.icon}/>):null}
+            {props.icon?(<img alt='icon' src={props.icon}/>):null}
             {props.title}
             
             </button>

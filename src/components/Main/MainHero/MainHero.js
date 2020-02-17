@@ -13,7 +13,7 @@ export const MainHero = () => {
                 </video>
             </div>
             <div className='hero-text'>
-                <img src={infoShareWhiteLogo} className='text-logo'/>
+                <img src={infoShareWhiteLogo} className='text-logo' alt='logo'/>
                 <div className='text-info'>
                     <h1 className='text-info-heading bold'>the biggest tech conference in cee</h1>
                     <h2 className='text-info-heading'>Gdańsk, AMberexpo, June 19 - 21, 2021</h2>
