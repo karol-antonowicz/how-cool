@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import plus from '../../assets/img/plus.png';
-import minus from '../../assets/img/minus.png';
 import './HeaderNav.scss';
 
 
